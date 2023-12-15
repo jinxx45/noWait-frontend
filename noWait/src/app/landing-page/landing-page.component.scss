@@ -1,0 +1,113 @@
+body{
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.navSection{
+    box-shadow: 0px 4px 4px -3px rgba(153,150,153,1);
+    padding-top: 0.3rem;
+}
+
+.noWaitLogo{
+    font-family: 'B612 Mono', monospace;
+    color: #ff6459;
+    margin-top: 2px;
+}
+
+.noWaitTile{
+    letter-spacing: 0.1rem;
+    font-weight: 400;
+    font-size: 1.3rem;
+}
+
+.noWaitLandingPage{
+    min-height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    
+}
+.noWaitnavbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.noWaitnavbar {
+    ul {
+        list-style: none;
+        display: flex;
+        
+    }
+    li{
+        margin-top: 0.7rem;
+        margin-right: 2rem;
+        white-space: nowrap;
+        font-weight: 400;
+        cursor: pointer;
+        transition: transform 0.3s ease
+        color 0.3s ease
+        font-weight 0.3s ease;
+
+        &:hover {
+            
+            transform: scale(1.1);
+            color: #e31e24;
+            font-weight: 600;
+        }
+    }
+}
+
+.loginButton{
+    background-color:#ff6459;
+    color: white;
+    padding: 4px 10px 4px 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+
+    &:hover {
+        transform: scale(1.1);
+        color: white !important;
+    }
+}
+
+.noWaitLandingPageBody{
+    .heroText{
+        color: black;
+        font-size: 4.8rem;
+        line-height: 99%;
+        font-family: 'B612 Mono', monospace;
+        color: #ff6459;
+        padding-top: 0px;
+        margin-top: 0PX;
+    }
+    .heroFooter{
+        letter-spacing: 0.2rem;
+        padding-top: 1rem;
+    }
+    .nearbyRestaurantsButton{
+        margin-right: 3rem;
+        border: none;
+        padding: 1.2rem;
+        background-color: #ff6459;
+        color: white;
+        font-weight: 500;
+    }
+
+    .exploreMenuButton{
+        border: none;
+        background-color: white;
+        text-decoration: underline;
+        color: #ff6459;
+    }
+    
+}
+.noWaitLandingPageFooter{
+
+}
+
+.noWaitlogo{
+    height: 5rem;
+    width: 5rem;
+}
