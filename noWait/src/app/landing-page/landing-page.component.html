@@ -123,7 +123,7 @@
                   <div class="dropdown-menu show" *ngIf="isDropdownOpen['guestSelected'] && filteredFoodTypes.length > 0">
                     <div
                       class="dropdown-item"
-                      *ngFor="let guest of guestNumbers "
+                      *ngFor="let guest of guestNumbers"
                       (mousedown)="selectItem('guestSelected',guest)"
                     >
                       {{ guest }}
