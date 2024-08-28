@@ -6,12 +6,30 @@
                 <h3 class="noWaitLogo">NW</h3>
                 <h3 class="noWaitTile px-3">NoWait - Instant Table Booking</h3>
             </div>
-           
-            <ul class="text-danger">
-                <li >Find Food</li>
-                <li>Find Restaurant</li>
-                <li class="loginButton">Login/Register</li>
-            </ul>
+                <ul class="right-side-nav">
+                    <li>About Us</li>
+                    <!-- TODO : LOAD FROM DATABASE -->
+                    <li class="d-flex justify-content-center">
+                        <div class="dropdown">
+                            <button
+                              class="btn btn-danger dropdown-toggle"
+                              type="button"
+                              id="dropdownMenuButton"
+                              data-toggle="dropdown"
+                              aria-haspopup="true"
+                              aria-expanded="false"
+                            >
+                            <img style="margin-bottom: 3px;" height="20" width="20" src="../../assets/images/locationIconWhite.png" alt="">
+                              {{ selectedLocation ? selectedLocation : 'Choose Location' }}
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                              <a class="dropdown-item" href="#" (click)="selectLocation('Pondicherry')">Pondicherry</a>
+                              <a class="dropdown-item" href="#" (click)="selectLocation('Chennai')">Chennai</a>
+                              <a class="dropdown-item" href="#" (click)="selectLocation('Bangalore')">Bangalore</a>
+                            </div>
+                          </div>
+                    </li>
+                </ul>
         </div>
     </section>
     
@@ -19,23 +37,104 @@
     <div class="sectionHero">
 
         <div class="noWaitLandingPageBody container-md">
-            <div class="row flex align-items-center mt-5">
+            <div class="row flex align-items-center justify-content-center mt-5">
                 <div class="col-md-6 flex flex-column">
                     <p class="fw-semibold">Simple way to book a table</p>
-                    <h1 class="heroText">Drink,Food & Enjoy With your Family.</h1>
+                    <h1 class="heroText">Drink,Party & Enjoy With your Family.</h1>
                     <p class="heroFooter">Quick, hot, and delicious bites—zero wait!</p>
-                    <div class="herobuttons">
-                        <button class="nearbyRestaurantsButton">View Nearby Restaurants</button>
-                        <button class="exploreMenuButton">Explore Menu</button>
-                    </div>
                 </div>
 
-                <div class="col-md-6">
-                    <img src="../../assets/images/noWaitLandingPageHero.svg" alt="">
+                <div class="col-md-6 d-flex justify-content-center">
+                    <img src="../../assets/images/wineDining.png" alt="">
                 </div>
             </div>
         </div>
     </div>
+
+    
+        <div class="search container-md">
+            <div class="searchbox">
+              <div class="searchCols">
+                <div class="form-group position-relative">
+                  <label (click)="focusInput()" [for]="'foodType'" [ngClass]="{'active': selectedFoodType || isDropdownOpen['foodType']}">Food Type</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="foodType"
+                    readonly="true"
+                    placeholder=" "
+                    [(ngModel)]="selectedFoodType"
+                    (focus)="toggleDropdown('foodType',true)"
+                    (blur)="closeDropdown('foodType')"
+                    [attr.aria-expanded]="isDropdownOpen['foodType']"
+                  />
+                  <div class="dropdown-menu show" *ngIf="isDropdownOpen['foodType'] && filteredFoodTypes.length > 0">
+                    <div
+                      class="dropdown-item"
+                      *ngFor="let foodType of filteredFoodTypes"
+                      (mousedown)="selectItem('foodType',foodType)"
+                    >
+                      {{ foodType }}
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="searchCols">
+                <div class="form-group position-relative">
+                  <label (click)="focusInput()" [for]="'timePeriod'" [ngClass]="{'active': selectedTimePeriod || isDropdownOpen['timePeriod']}">Time</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="timePeriod"
+                    readonly="true"
+                    placeholder=" "
+                    [(ngModel)]="selectedTimePeriod"
+                    (focus)="toggleDropdown('timePeriod',true)"
+                    (blur)="closeDropdown('timePeriod')"
+                    [attr.aria-expanded]="isDropdownOpen['timePeriod']"
+                  />
+                  <div class="dropdown-menu show" *ngIf="isDropdownOpen['timePeriod'] && timePeriods.length > 0">
+                    <div
+                      class="dropdown-item"
+                      *ngFor="let timePeriod of timePeriods"
+                      (mousedown)="selectItem('timePeriod',timePeriod)"
+                    >
+                      {{ timePeriod }}
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="searchCols">
+                <div class="form-group position-relative">
+                  <label (click)="focusInput()" [for]="'foodType'" [ngClass]="{'active': numberofGuestSelected || isDropdownOpen['guestSelected']}">Number of guests</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="foodType"
+                    readonly="true"
+                    placeholder=" "
+                    [(ngModel)]="numberofGuestSelected"
+                    (focus)="toggleDropdown('guestSelected',true)"
+                    (blur)="closeDropdown('guestSelected')"
+                    [attr.aria-expanded]="isDropdownOpen['guestSelected']"
+                  />
+                  <div class="dropdown-menu show" *ngIf="isDropdownOpen['guestSelected'] && filteredFoodTypes.length > 0">
+                    <div
+                      class="dropdown-item"
+                      *ngFor="let guest of guestNumbers "
+                      (mousedown)="selectItem('guestSelected',guest)"
+                    >
+                      {{ guest }}
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+        </div>
+   
     
     
     <div class="noWaitLandingPageFooter">
