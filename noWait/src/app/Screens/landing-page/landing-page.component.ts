@@ -5,7 +5,7 @@ import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
   templateUrl: './landing-page.component.html',
   styleUrls: ['./landing-page.component.scss']
 })
-export class LandingPageComponent {
+export class LandingPageScreen {
 
   constructor(){
     this.fillTimePeriods();

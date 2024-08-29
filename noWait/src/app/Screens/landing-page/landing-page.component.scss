@@ -1,6 +1,6 @@
 body{
     margin: 0;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Playfair Display", serif;
 }
 
 .navSection{
@@ -9,7 +9,7 @@ body{
 }
 
 .noWaitLogo{
-    font-family: 'B612 Mono', monospace;
+    font-family:"Playfair Display", serif;
     color: #ef4444;
     margin-top: 2px;
 }
@@ -73,7 +73,7 @@ body{
         color: black;
         font-size: 4.8rem;
         line-height: 99%;
-        font-family: 'Poppins', sans-serif;
+        font-family: "Playfair Display", serif;
         padding-top: 0px;
         margin-top: 0PX;
         font-weight: 600;
@@ -178,3 +178,17 @@ body{
     height: 200px;
     overflow-y: auto;
   }
+
+//   Top Picsk Section
+
+// <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 400 to 900
+
+.playfair-display {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+  }
+
+
