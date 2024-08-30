@@ -1,31 +1,47 @@
 import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
+import { TopPicksCardComponent } from 'src/app/Components/LandingPage/top-picks-card/top-picks-card.component';
 
 @Component({
   selector: 'app-landing-page',
   templateUrl: './landing-page.component.html',
-  styleUrls: ['./landing-page.component.scss']
+  styleUrls: ['./landing-page.component.scss'],
 })
 export class LandingPageScreen {
-
-  constructor(){
+  constructor() {
     this.fillTimePeriods();
   }
 
-  
   @ViewChild('foodTypeInput') foodTypeInput!: ElementRef;
   selectedLocation: string | null = null;
   selectedFoodType: string | null = null;
   selectedTimePeriod: string | null = null;
-  numberofGuestSelected :string | null = null;
+  numberofGuestSelected: string | null = null;
   searchTerm: string = '';
   isDropdownOpen: { [key: string]: boolean } = {
     foodType: false,
     timePeriod: false,
-    guestSelected: false
+    guestSelected: false,
   };
   foodTypes: string[] = ['Continental', 'Indian', 'Chinese'];
-  timePeriods: string[] =[];
-  guestNumbers: any = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,'Larger Party'];
+  timePeriods: string[] = [];
+  guestNumbers: any = [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    'Larger Party',
+  ];
   filteredFoodTypes: string[] = [...this.foodTypes];
 
   selectLocation(location: string) {
@@ -37,19 +53,18 @@ export class LandingPageScreen {
       this.selectedFoodType = item;
     } else if (type === 'timePeriod') {
       this.selectedTimePeriod = item;
+    } else if (type === 'guestSelected') {
+      this.numberofGuestSelected = item;
     }
-      else if(type === 'guestSelected'){
-        this.numberofGuestSelected = item
-      }
     this.isDropdownOpen[type] = false;
-    this.closeDropdown(type)
+    this.closeDropdown(type);
   }
 
-  toggleDropdown(type:string, open: boolean) {
+  toggleDropdown(type: string, open: boolean) {
     this.isDropdownOpen[type] = open;
   }
 
-  closeDropdown(type:string) {
+  closeDropdown(type: string) {
     setTimeout(() => {
       this.isDropdownOpen[type] = false;
     }, 200); // slight delay to allow click event to register
@@ -67,8 +82,15 @@ export class LandingPageScreen {
     let currentHour = startHour;
     let currentMinute = 0;
 
-    while (currentHour < endHour || (currentHour === endHour && currentMinute === 0)) {
-      const formattedTime = `${this.formatTime(currentHour)}:${this.formatMinutes(currentMinute)} ${currentHour >= 12 ? 'PM' : 'AM'}`;
+    while (
+      currentHour < endHour ||
+      (currentHour === endHour && currentMinute === 0)
+    ) {
+      const formattedTime = `${this.formatTime(
+        currentHour
+      )}:${this.formatMinutes(currentMinute)} ${
+        currentHour >= 12 ? 'PM' : 'AM'
+      }`;
       this.timePeriods.push(formattedTime);
 
       // Increment the time
@@ -81,14 +103,16 @@ export class LandingPageScreen {
   }
 
   formatTime(hour: number): string {
-    return hour > 12 ? (hour - 12).toString().padStart(2, '0') : hour.toString().padStart(2, '0');
+    return hour > 12
+      ? (hour - 12).toString().padStart(2, '0')
+      : hour.toString().padStart(2, '0');
   }
 
   formatMinutes(minutes: number): string {
     return minutes.toString().padStart(2, '0');
   }
 
-  selectTime(selectedTime :string){
+  selectTime(selectedTime: string) {
     this.selectedTimePeriod = selectedTime;
   }
 
@@ -102,13 +126,8 @@ export class LandingPageScreen {
       this.isDropdownOpen = {
         foodType: false,
         timePeriod: false,
-        guestSelected: false
+        guestSelected: false,
       };
     }
   }
-
-
-
-
-
 }

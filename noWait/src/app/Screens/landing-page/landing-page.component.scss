@@ -1,183 +1,174 @@
-body{
-    margin: 0;
-    font-family: "Playfair Display", serif;
+body {
+  margin: 0;
+  font-family: "Playfair Display", serif;
 }
 
-.navSection{
-    padding-top: 0.3rem;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+.navSection {
+  padding-top: 0.3rem;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
-.noWaitLogo{
-    font-family:"Playfair Display", serif;
-    color: #ef4444;
-    margin-top: 2px;
+.noWaitLogo {
+  font-family: "Playfair Display", serif;
+  color: #ef4444;
+  margin-top: 2px;
 }
 
-.noWaitTile{
-    font-weight: 600;
-    font-size: 1.3rem;
+.noWaitTile {
+  font-weight: 600;
+  font-size: 1.3rem;
 }
 
-.noWaitLandingPage{
-    min-height: 100%;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    
+.noWaitLandingPage {
+  min-height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
 }
-.noWaitnavbar{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.noWaitnavbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .noWaitnavbar {
-    ul {
-        list-style: none;
-        display: flex;
-        
-    }
-    li{
-        margin-top: 0.7rem;
-        margin-right: 2rem;
-        white-space: nowrap;
-        font-weight: 400;
-        cursor: pointer;
-        transition: transform 0.3s ease
-        color 0.3s ease
-        font-weight 0.3s ease;
-
-        &:hover {
-        color: #e31e24;
-        font-weight: 600;
-        }
-    }
-}
-
-.loginButton{
-    background-color:#ff6459;
-    color: white;
-    padding: 4px 10px 4px 10px;
+  ul {
+    list-style: none;
+    display: flex;
+  }
+  li {
+    margin-top: 0.7rem;
+    margin-right: 2rem;
+    white-space: nowrap;
+    font-weight: 400;
     cursor: pointer;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease color 0.3s ease font-weight 0.3s ease;
 
     &:hover {
-        transform: scale(1.1);
-        color: white !important;
+      color: #e31e24;
+      font-weight: 600;
     }
+  }
 }
 
-.noWaitLandingPageBody{
-    .heroText{
-        color: black;
-        font-size: 4.8rem;
-        line-height: 99%;
-        font-family: "Playfair Display", serif;
-        padding-top: 0px;
-        margin-top: 0PX;
-        font-weight: 600;
-    }
-    .heroFooter{
-        letter-spacing: 0.2rem;
-        padding-top: 1rem;
-    }
-    .nearbyRestaurantsButton{
-        margin-right: 3rem;
-        border: none;
-        padding: 1.2rem;
-        background-color: #ff6459;
-        color: white;
-        font-weight: 500;
-    }
+.loginButton {
+  background-color: #ff6459;
+  color: white;
+  padding: 4px 10px 4px 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
 
-    .exploreMenuButton{
-        border: none;
-        background-color: white;
-        text-decoration: underline;
-        color: #ff6459;
-    }
-    
-}
-.noWaitLandingPageFooter{
-
+  &:hover {
+    transform: scale(1.1);
+    color: white !important;
+  }
 }
 
-.noWaitlogo{
-    height: 5rem;
-    width: 5rem;
-}
-
-.right-side-nav{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
-.right-side-nav{
-    button{
-        color: white !important;
-        border-radius: 0%;
-        width: 200px; /* Set a fixed width */
-        white-space: nowrap; /* Prevents text from wrapping */
-        overflow: hidden; /* Hides overflow text */
-        text-overflow: ellipsis; /* Adds ellipsis (...) if text is too long */
-    }
-}
-
-.searchbox{
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-    border-radius: 15px;
-    padding: 1rem;
-    display: flex;
-    justify-content: space-around;
-    margin-top: 3rem;
+.noWaitLandingPageBody {
+  .heroText {
+    color: black;
+    font-size: 4.8rem;
+    line-height: 99%;
+    font-family: "Playfair Display", serif;
+    padding-top: 0px;
+    margin-top: 0px;
+    font-weight: 600;
+  }
+  .heroFooter {
+    letter-spacing: 0.2rem;
+    padding-top: 1rem;
+  }
+  .nearbyRestaurantsButton {
     margin-right: 3rem;
+    border: none;
+    padding: 1.2rem;
+    background-color: #ff6459;
+    color: white;
+    font-weight: 500;
+  }
+
+  .exploreMenuButton {
+    border: none;
+    background-color: white;
+    text-decoration: underline;
+    color: #ff6459;
+  }
 }
 
-.searchCols{
-    padding-top: 1.2rem;
-    width: 15rem;
-    display: flex;
+.noWaitlogo {
+  height: 5rem;
+  width: 5rem;
 }
 
+.right-side-nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.right-side-nav {
+  button {
+    color: white !important;
+    border-radius: 0%;
+    width: 200px; /* Set a fixed width */
+    white-space: nowrap; /* Prevents text from wrapping */
+    overflow: hidden; /* Hides overflow text */
+    text-overflow: ellipsis; /* Adds ellipsis (...) if text is too long */
+  }
+}
+
+.searchbox {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  border-radius: 15px;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 3rem;
+  margin-right: 3rem;
+}
+
+.searchCols {
+  padding-top: 1.2rem;
+  width: 15rem;
+  display: flex;
+}
 
 .form-group {
-    position: relative;
-    margin-bottom: 1.5rem;
-  }
-  
-  label {
-    position: absolute;
-    top: 50%;
-    left: 0.75rem;
-    transform: translateY(-50%);
-    transition: 0.2s ease all;
-    pointer-events: none;
-    background: white; /* To make the label background white so it doesn't overlap the input text */
-    padding: 0 0.25rem;
-  }
-  
-  input:focus + label, 
-  input:not(:placeholder-shown) + label, 
-  label.active {
-    top: -0.75rem;
-    left: 0.75rem;
-    font-size: 0.75rem;
-    color: #dc3545;
-    pointer-events: auto; /* Allow clicking on the label */
-  }
+  position: relative;
+  margin-bottom: 1.5rem;
+}
 
-  .form-control{
-    border: none;
-    border-bottom: 1px solid #dc3545;
-    border-radius: 0;
-  }
+label {
+  position: absolute;
+  top: 50%;
+  left: 0.75rem;
+  transform: translateY(-50%);
+  transition: 0.2s ease all;
+  pointer-events: none;
+  background: white; /* To make the label background white so it doesn't overlap the input text */
+  padding: 0 0.25rem;
+}
 
-  .dropdown-menu{
-    height: 200px;
-    overflow-y: auto;
-  }
+input:focus + label,
+input:not(:placeholder-shown) + label,
+label.active {
+  top: -0.75rem;
+  left: 0.75rem;
+  font-size: 0.75rem;
+  color: #dc3545;
+  pointer-events: auto; /* Allow clicking on the label */
+}
+
+.form-control {
+  border: none;
+  border-bottom: 1px solid #dc3545;
+  border-radius: 0;
+}
+
+.dropdown-menu {
+  height: 200px;
+  overflow-y: auto;
+}
 
 //   Top Picsk Section
 
@@ -185,10 +176,14 @@ body{
 // <weight>: Use a value from 400 to 900
 
 .playfair-display {
-    font-family: "Playfair Display", serif;
-    font-optical-sizing: auto;
-    font-weight: 500;
-    font-style: normal;
-  }
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
 
-
+.top-picks-cards-section {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 1rem;
+}

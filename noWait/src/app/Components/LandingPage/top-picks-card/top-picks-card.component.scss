@@ -1,0 +1,28 @@
+.card-content-with-img {
+  height: auto;
+  width: 21rem;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  margin-bottom: 3rem;
+  padding: 6px;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  font-family: "SUSE", sans-serif;
+}
+
+.card-content .restarantname {
+  font-weight: bold;
+  margin-bottom: 0px;
+}
+
+.title-with-rating {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-content p {
+  margin: 0;
+}
