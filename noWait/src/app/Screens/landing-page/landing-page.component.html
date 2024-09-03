@@ -189,7 +189,9 @@
     <div
       class="header-top-picks playfair-display d-flex justify-content-center"
     >
-      <h1 style="margin-top: 2rem; letter-spacing: 1px">TOP PICKS</h1>
+      <h1 style="margin-top: 2rem; letter-spacing: 1px; font-weight: bolder">
+        TOP PICKS
+      </h1>
       <h1
         *ngIf="selectedLocation != null"
         style="margin-top: 2rem; letter-spacing: 1px"
@@ -217,6 +219,10 @@
         [rating]="4.5"
       ></app-top-picks-card>
     </div>
+  </div>
+
+  <div class="how-it-works-section container-md">
+    <app-steps />
   </div>
 
   <div class="noWaitLandingPageFooter"></div>

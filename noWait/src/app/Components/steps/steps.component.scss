@@ -1,0 +1,29 @@
+.steps {
+  margin: 0rem;
+  padding: 0rem 4rem;
+}
+
+.step-count-with-header {
+  display: flex;
+  justify-content: center;
+}
+.single-step {
+  font-family: "SUSE", sans-serif;
+}
+.step-count {
+  padding-top: 10px;
+}
+.single-step .row {
+  margin: 0;
+}
+.topic-header {
+  font-family: "Playfair Display", serif;
+  margin-bottom: 3rem;
+  font-weight: bolder;
+}
+
+.header-with-desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
