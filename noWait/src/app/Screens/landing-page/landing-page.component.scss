@@ -187,3 +187,11 @@ label.active {
   justify-content: space-around;
   margin-top: 1rem;
 }
+
+.image-wrapper {
+  padding: 8rem;
+  margin-top: 3rem;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../../../assets/images/pre-footer-image.png") no-repeat center center;
+  background-size: cover;
+}

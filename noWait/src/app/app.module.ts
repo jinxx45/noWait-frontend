@@ -8,6 +8,7 @@ import { FormsModule } from '@angular/forms';
 import { TopPicksCardComponent } from './Components/LandingPage/top-picks-card/top-picks-card.component';
 import { RatingCardComponent } from './Components/LandingPage/rating-card/rating-card.component';
 import { StepsComponent } from './Components/steps/steps.component';
+import { PreFooterComponent } from './Components/LandingPage/pre-footer/pre-footer.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { StepsComponent } from './Components/steps/steps.component';
     TopPicksCardComponent,
     RatingCardComponent,
     StepsComponent,
+    PreFooterComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],

@@ -1,5 +1,5 @@
 import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
-import { TopPicksCardComponent } from 'src/app/Components/LandingPage/top-picks-card/top-picks-card.component';
+import { PreFooterComponent } from 'src/app/Components/LandingPage/pre-footer/pre-footer.component';
 
 @Component({
   selector: 'app-landing-page',
