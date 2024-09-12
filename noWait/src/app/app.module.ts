@@ -11,6 +11,7 @@ import { StepsComponent } from './Components/LandingPage/steps/steps.component';
 import { PreFooterComponent } from './Components/LandingPage/pre-footer/pre-footer.component';
 import { SearchCardRestaurantsComponent } from './Components/LandingPage/search-card-restaurants/search-card-restaurants.component';
 import { RestaurantListScreen } from './Screens/restaurant-list/restaurant-list.component';
+import { StickyNavFiltersComponent } from './Components/RestarauntPage/sticky-nav-filters/sticky-nav-filters.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { RestaurantListScreen } from './Screens/restaurant-list/restaurant-list.
     PreFooterComponent,
     SearchCardRestaurantsComponent,
     RestaurantListScreen,
+    StickyNavFiltersComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],

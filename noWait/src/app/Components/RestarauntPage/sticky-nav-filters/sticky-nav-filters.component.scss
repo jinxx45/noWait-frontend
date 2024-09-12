@@ -1,0 +1,28 @@
+.nav-sticky {
+  z-index: 1000;
+  position: sticky;
+  top: 0;
+  padding: 1rem;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+.sticky-row {
+  display: flex;
+  justify-content: flex-start;
+}
+.sticky-nav-buttons {
+  font-family: "SUSE", sans-serif;
+  border: 0.6px solid #ff5050;
+  background-color: white;
+  border-radius: 10px;
+  color: #ff5050;
+  padding: 0px 20px;
+  width: auto;
+  height: 2rem;
+  margin-right: 1.5rem;
+}
+
+.sticky-nav-buttons:hover {
+  background-color: #ff5050;
+  color: white;
+}
