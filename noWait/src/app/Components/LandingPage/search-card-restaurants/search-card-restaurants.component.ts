@@ -1,4 +1,5 @@
 import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-search-card-restaurants',
@@ -6,7 +7,7 @@ import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
   styleUrls: ['./search-card-restaurants.component.scss'],
 })
 export class SearchCardRestaurantsComponent {
-  constructor() {
+  constructor(private router: Router) {
     this.fillTimePeriods();
   }
 
@@ -128,5 +129,9 @@ export class SearchCardRestaurantsComponent {
         guestSelected: false,
       };
     }
+  }
+
+  handleSearchRestaurants() {
+    this.router.navigate(['/restaurants']);
   }
 }
