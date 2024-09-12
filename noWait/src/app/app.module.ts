@@ -9,6 +9,7 @@ import { TopPicksCardComponent } from './Components/LandingPage/top-picks-card/t
 import { RatingCardComponent } from './Components/LandingPage/rating-card/rating-card.component';
 import { StepsComponent } from './Components/steps/steps.component';
 import { PreFooterComponent } from './Components/LandingPage/pre-footer/pre-footer.component';
+import { SearchCardRestaurantsComponent } from './Components/LandingPage/search-card-restaurants/search-card-restaurants.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { PreFooterComponent } from './Components/LandingPage/pre-footer/pre-foot
     RatingCardComponent,
     StepsComponent,
     PreFooterComponent,
+    SearchCardRestaurantsComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],

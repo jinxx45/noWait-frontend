@@ -1,0 +1,63 @@
+.searchbox {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  border-radius: 15px;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 3rem;
+  margin-right: 3rem;
+}
+
+.searchCols {
+  padding-top: 1.2rem;
+  width: 15rem;
+  display: flex;
+}
+
+.form-group {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+label {
+  position: absolute;
+  top: 50%;
+  left: 0.75rem;
+  transform: translateY(-50%);
+  transition: 0.2s ease all;
+  pointer-events: none;
+  background: white; /* To make the label background white so it doesn't overlap the input text */
+  padding: 0 0.25rem;
+}
+
+input:focus + label,
+input:not(:placeholder-shown) + label,
+label.active {
+  top: -0.75rem;
+  left: 0.75rem;
+  font-size: 0.75rem;
+  color: #dc3545;
+  pointer-events: auto; /* Allow clicking on the label */
+}
+
+.form-control {
+  border: none;
+  border-bottom: 1px solid #dc3545;
+  border-radius: 0;
+}
+
+.dropdown-menu {
+  height: 200px;
+  overflow-y: auto;
+}
+
+.book-button {
+  align-self: center;
+  background-color: red;
+  border: none;
+  height: 3.3rem;
+  width: 10rem;
+  color: white;
+  font-family: "SUSE", sans-serif;
+  font-weight: bolder;
+}

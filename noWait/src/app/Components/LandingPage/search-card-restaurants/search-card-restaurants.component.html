@@ -1,0 +1,115 @@
+<div class="search container-md">
+  <div class="searchbox">
+    <div class="searchCols">
+      <div class="form-group position-relative">
+        <label
+          (click)="focusInput()"
+          [for]="'foodType'"
+          [ngClass]="{
+            active: selectedFoodType || isDropdownOpen['foodType']
+          }"
+          >Food Type</label
+        >
+        <input
+          type="text"
+          class="form-control"
+          name="foodType"
+          readonly="true"
+          placeholder=" "
+          [(ngModel)]="selectedFoodType"
+          (focus)="toggleDropdown('foodType', true)"
+          (blur)="closeDropdown('foodType')"
+          [attr.aria-expanded]="isDropdownOpen['foodType']"
+        />
+        <div
+          class="dropdown-menu show"
+          *ngIf="isDropdownOpen['foodType'] && filteredFoodTypes.length > 0"
+        >
+          <div
+            class="dropdown-item"
+            *ngFor="let foodType of filteredFoodTypes"
+            (mousedown)="selectItem('foodType', foodType)"
+          >
+            {{ foodType }}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="searchCols">
+      <div class="form-group position-relative">
+        <label
+          (click)="focusInput()"
+          [for]="'timePeriod'"
+          [ngClass]="{
+            active: selectedTimePeriod || isDropdownOpen['timePeriod']
+          }"
+          >Time</label
+        >
+        <input
+          type="text"
+          class="form-control"
+          name="timePeriod"
+          readonly="true"
+          placeholder=" "
+          [(ngModel)]="selectedTimePeriod"
+          (focus)="toggleDropdown('timePeriod', true)"
+          (blur)="closeDropdown('timePeriod')"
+          [attr.aria-expanded]="isDropdownOpen['timePeriod']"
+        />
+        <div
+          class="dropdown-menu show"
+          *ngIf="isDropdownOpen['timePeriod'] && timePeriods.length > 0"
+        >
+          <div
+            class="dropdown-item"
+            *ngFor="let timePeriod of timePeriods"
+            (mousedown)="selectItem('timePeriod', timePeriod)"
+          >
+            {{ timePeriod }}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="searchCols">
+      <div class="form-group position-relative">
+        <label
+          (click)="focusInput()"
+          [for]="'foodType'"
+          [ngClass]="{
+            active: numberofGuestSelected || isDropdownOpen['guestSelected']
+          }"
+          >Number of guests</label
+        >
+        <input
+          type="text"
+          class="form-control"
+          name="foodType"
+          readonly="true"
+          placeholder=" "
+          [(ngModel)]="numberofGuestSelected"
+          (focus)="toggleDropdown('guestSelected', true)"
+          (blur)="closeDropdown('guestSelected')"
+          [attr.aria-expanded]="isDropdownOpen['guestSelected']"
+        />
+        <div
+          class="dropdown-menu show"
+          *ngIf="
+            isDropdownOpen['guestSelected'] && filteredFoodTypes.length > 0
+          "
+        >
+          <div
+            class="dropdown-item"
+            *ngFor="let guest of guestNumbers"
+            (mousedown)="selectItem('guestSelected', guest)"
+          >
+            {{ guest }}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <button class="book-button">Find Restaurants</button>
+  </div>
+</div>
